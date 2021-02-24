@@ -62,4 +62,10 @@ for i in range(length[0]):
         sum_2 += arr[i][j]
     sigma[i] = math.sqrt((length[1] * sum_1 - math.pow(sum_2, 2))/(length[1]*(length[1] - 1)))
 
+for i in range(length[0]):
+    p_test = p_e.copy()
+    p_test[i] = 1
+    res_scen = np.vstack(np.column_stack((p_e, p_test, arr_scen[i], arr_scen[i] - p_test)))
+print(res_scen)
+
 
