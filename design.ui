@@ -23,19 +23,15 @@
       <height>281</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="arr_name">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>181</width>
-      <height>21</height>
-     </rect>
+    <property name="iconSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
     </property>
-    <property name="text">
-     <string>Матриця імовірності подій</string>
-    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>50</number>
+    </attribute>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -48,6 +44,32 @@
     </property>
     <property name="text">
      <string>Далі</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Матриця імовірності подій</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Матриця імовірності подій</string>
     </property>
    </widget>
   </widget>
