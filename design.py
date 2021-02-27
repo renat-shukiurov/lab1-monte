@@ -77,7 +77,7 @@ class Ui_MethodPV_Radio(object):
         self.rdBtnPeChance.setChecked(False)
         self.rdBtnPeChance.setObjectName("rdBtnPeChance")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(340, 20, 81, 16))
+        self.label.setGeometry(QtCore.QRect(340, 20, 151, 31))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.label.setFont(font)

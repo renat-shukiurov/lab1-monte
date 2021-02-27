@@ -88,7 +88,7 @@ class Ui_Scenaries(object):
         self.t_sigma.setColumnCount(0)
         self.t_sigma.setRowCount(0)
         self.label_2 = QtWidgets.QLabel(Scenaries)
-        self.label_2.setGeometry(QtCore.QRect(360, 30, 71, 16))
+        self.label_2.setGeometry(QtCore.QRect(360, 15, 131, 31))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.label_2.setFont(font)
