@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MethodPV_Radio</class>
+ <widget class="QMainWindow" name="MethodPV_Radio">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -35,11 +35,11 @@
      <number>50</number>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="openWindow">
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>580</y>
+      <y>600</y>
       <width>113</width>
       <height>32</height>
      </rect>
@@ -48,29 +48,11 @@
      <string>Далі</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>20</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>21</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Вхідні данні</string>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="vector_widget">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>500</y>
+      <y>530</y>
       <width>651</width>
       <height>51</height>
      </rect>
@@ -82,8 +64,8 @@
    <widget class="QPushButton" name="fileBtn">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>50</y>
+      <x>600</x>
+      <y>120</y>
       <width>113</width>
       <height>31</height>
      </rect>
@@ -95,8 +77,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>50</y>
+      <x>610</x>
+      <y>80</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -108,26 +90,29 @@
    <widget class="QGroupBox" name="grp1">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>70</y>
-      <width>551</width>
-      <height>81</height>
+      <x>80</x>
+      <y>60</y>
+      <width>471</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>Матриці</string>
     </property>
     <widget class="QRadioButton" name="rdBtnArrPV">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>50</y>
+       <y>60</y>
        <width>221</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Матриця перехресного впливу</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -136,8 +121,8 @@
     <widget class="QRadioButton" name="rdBtnArrRel">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>50</y>
+       <x>260</x>
+       <y>60</y>
        <width>221</width>
        <height>20</height>
       </rect>
@@ -145,12 +130,15 @@
      <property name="text">
       <string>Матриця відношень шансів</string>
      </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
     </widget>
     <widget class="QRadioButton" name="rdBtnArr">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>30</y>
        <width>191</width>
        <height>20</height>
       </rect>
@@ -159,7 +147,7 @@
       <string>Матриця імовірності подій</string>
      </property>
      <property name="checkable">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -168,8 +156,8 @@
     <widget class="QRadioButton" name="rdBtnArrChance">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>20</y>
+       <x>260</x>
+       <y>30</y>
        <width>131</width>
        <height>20</height>
       </rect>
@@ -177,19 +165,22 @@
      <property name="text">
       <string>Матриця шансів</string>
      </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
     </widget>
    </widget>
    <widget class="QGroupBox" name="grp2">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>440</y>
+      <x>80</x>
+      <y>450</y>
       <width>551</width>
       <height>61</height>
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>Вектори</string>
     </property>
     <widget class="QRadioButton" name="rdBtnPe">
      <property name="geometry">
@@ -202,6 +193,9 @@
      </property>
      <property name="text">
       <string>Вектор імовірностей</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -219,10 +213,54 @@
      <property name="text">
       <string>Вектор безумовних впливів</string>
      </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
      <property name="checked">
       <bool>false</bool>
      </property>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Вхідні дані</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exitBtn">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>600</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>Вихід</string>
+    </property>
    </widget>
   </widget>
  </widget>

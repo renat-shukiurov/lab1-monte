@@ -6,7 +6,7 @@ import sys
 
 w_l = 1
 random.seed(20)
-arr = np.loadtxt('data2.txt')
+arr = np.loadtxt('data.txt')
 length = np.shape(arr)
 w_list = np.full(length[1], w_l)
 p_e = np.zeros(length[0])
@@ -62,10 +62,29 @@ for i in range(length[0]):
         sum_2 += arr[i][j]
     sigma[i] = math.sqrt((length[1] * sum_1 - math.pow(sum_2, 2))/(length[1]*(length[1] - 1)))
 
+res_scen = []
+delta_list = []
 for i in range(length[0]):
     p_test = p_e.copy()
     p_test[i] = 1
-    res_scen = np.vstack(np.column_stack((p_e, p_test, arr_scen[i], arr_scen[i] - p_test)))
-print(res_scen)
+    delta_list.append(list(arr_scen[i] - p_test))
+    res_scen.append(list(np.vstack(np.column_stack((p_e, p_test, arr_scen[i], arr_scen[i] - p_test)))))
 
+res_delta = np.array(delta_list) ** 2
 
+max_delta = []
+
+for i in range(len(res_delta[0])):
+    max_delta.append(np.max(res_delta[i]))
+
+max_delta = np.array(max_delta)
+
+L1 = np.sum(max_delta) / length[0] / 2
+
+L4 = 3/math.sqrt(N_iter)
+
+IKD = (1 - L1)*(1 - L4)
+
+print(L1)
+print(L4)
+print(IKD)
